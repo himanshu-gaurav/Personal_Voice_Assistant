@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Voice Assistant Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Voice Assistant with Decision-Making</h1>
+    </header>
+    
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" data-tab="interactive">Interactive Demo</div>
+            <div class="tab" data-tab="architecture">Decision Architecture</div>
+            <div class="tab" data-tab="about">About</div>
+        </div>
+        
+        <div class="tab-content active" id="interactive">
+            <div class="actor-selector">
+                <label for="actor-select">Select User Type:</label>
+                <select id="actor-select">
+                    <option value="individual">Individual User</option>
+                    <option value="business">Business Customer</option>
+                    <option value="elderly">Elderly/Differently-Abled User</option>
+                </select>
+            </div>
+            
+            <div class="scenario-selector">
+                <label for="scenario-select">Choose Interaction Scenario:</label>
+                <select id="scenario-select">
+                    <option value="morning-routine">Morning Routine Assistant</option>
+                    <option value="customer-support">Customer Support Query</option>
+                    <option value="medication-reminder">Medication and Appointment Reminder</option>
+                    <option value="security-check">Security Authentication</option>
+                </select>
+            </div>
+            
+            <div class="assistant-container">
+                <div class="assistant-header">
+                    <div class="assistant-icon">VA</div>
+                    <div class="assistant-title">
+                        <h2>Smart Voice Assistant</h2>
+                        <p>With Advanced Decision-Making</p>
+                    </div>
+                </div>
+                
+                <div class="conversation-area" id="conversation">
+                    <div class="assistant-message">Hello! I'm your personal voice assistant with advanced decision-making capabilities. How can I help you today?</div>
+                </div>
+                
+                <div class="thinking" id="thinking">
+                    Analyzing input and context, making decisions...
+                </div>
+                
+                <div class="decision-info" id="decision-info">
+                    <strong>Decision Process:</strong> <span id="decision-text"></span>
+                </div>
+                
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Type your message..." />
+                    <button id="send-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="architecture">
+            <h2>Decision-Making Architecture</h2>
+            
+            <div class="visualization">
+                <h3>Core Decision Framework</h3>
+                <div class="decision-tree">
+                    <div class="node root">Voice Input Analysis</div>
+                    <div class="connector"></div>
+                    <div class="branches">
+                        <div class="branch">
+                            <div class="node">Context Evaluation</div>
+                            <div class="connector"></div>
+                            <div class="node leaf">Personalization Decision</div>
+                        </div>
+                        <div class="branch">
+                            <div class="node">Security Verification</div>
+                            <div class="connector"></div>
+                            <div class="node leaf">Access Decision</div>
+                        </div>
+                        <div class="branch">
+                            <div class="node">Query Classification</div>
+                            <div class="connector"></div>
+                            <div class="node leaf">Response Action</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="visualization">
+                <h3>Key Decision Points</h3>
+                <ul>
+                    <li><strong>User Intent Recognition:</strong> Determines the true intent behind user queries based on current and historical context</li>
+                    <li><strong>Priority Setting:</strong> Decides which tasks need immediate attention vs. which can be scheduled</li>
+                    <li><strong>Assistance Level:</strong> Determines how much help to provide based on user profile and history</li>
+                    <li><strong>Security Escalation:</strong> Decides when to require additional verification for sensitive requests</li>
+                    <li><strong>Learning Feedback:</strong> Selects which interactions should be used to improve the system</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="about">
+            <h2>About This Prototype</h2>
+            <p>This interactive prototype demonstrates a personal voice assistant with advanced decision-making capabilities. The system goes beyond basic voice recognition by incorporating contextual understanding, user profiling, and intelligent action selection.</p>
+            
+            <h3>Key Features:</h3>
+            <ul>
+                <li><strong>Context-Aware Responses:</strong> The assistant considers time, location, user history, and patterns to provide more relevant assistance</li>
+                <li><strong>User-Specific Adaptation:</strong> Different interaction modes for various user types (individuals, businesses, elderly/differently-abled)</li>
+                <li><strong>Advanced Security:</strong> Voice pattern authentication with risk-based security decisions</li>
+                <li><strong>Proactive Assistance:</strong> Anticipates needs based on learned patterns and current context</li>
+                <li><strong>Transparent Decision Process:</strong> Shows reasoning behind assistant choices for better user understanding</li>
+            </ul>
+            
+            <h3>Implementation Considerations:</h3>
+            <p>This prototype integrates with the previously developed speech recognition improvements and contextual AI to form a complete system. The decision layer serves as the "brain" that determines what actions to take based on recognized input and analyzed context.</p>
+        </div>
+    </div>
+    
+    <footer>
+        Team: Anupam Verma (B21EE007), Himanshu Gaurav (B21EE025), Himesh Dhaka (B21EE026)
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
